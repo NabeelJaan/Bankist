@@ -29,3 +29,26 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const header = document.querySelector('.header');
+
+// Create Elements
+
+const message = document.createElement('div');
+
+message.classList.add('cookie-message');
+
+message.innerHTML = 'Agree. <button class="btn btn--close--cookie">Got it!</button>';
+
+
+// header.prepend(message);
+header.append(message);
+
+
+header.after(message);
+// header.after(message);
+
+
+document.querySelector('.btn--close--cookie').addEventListener( 'click', function(){
+  message.remove();
+});
